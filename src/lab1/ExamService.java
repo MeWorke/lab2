@@ -130,4 +130,20 @@ public class ExamService {
             System.out.printf("Предмет: %-15s | Средний балл: %.2f%n", subjects[i], averages[i]);
         }
     }
+    public static void removeByName(String name) {
+        for (int i = 0; i < results.length; i++) {
+            if (results[i].getSubject().equalsIgnoreCase(name)) {
+                ExamResult[] newExam = new ExamResult[results.length - 1];
+                for (int j = 0, k = 0; j < results.length; j++) {
+                    if (j != i) {
+                        newExam[k++] = results[j];
+                    }
+                }
+                results = newExam;
+                System.out.println("Экзамен \"" + name + "\" удалён");
+                return;
+            }
+        }
+        System.out.println("Экзамен \"" + name + "\" не найден");
+    }
 }
