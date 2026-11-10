@@ -130,4 +130,14 @@ public class ExamService {
             System.out.printf("Предмет: %-15s | Средний балл: %.2f%n", subjects[i], averages[i]);
         }
     }
+
+    public static void countByName(String name) {
+        int count = 0;
+        for (ExamResult e : results) {
+            if (e.getSubject().equalsIgnoreCase(name)) {
+                count++;
+            }
+        }
+        System.out.println("Количество экзаменов \"" + name + "\": " + count);
+    }
 }
