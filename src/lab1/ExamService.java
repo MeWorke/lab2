@@ -164,4 +164,16 @@ public class ExamService {
         }
         System.out.println("Экзамен \"" + name + "\" не найден");
     }
+
+
+
+    public static void countByName(String name) {
+        int count = 0;
+        for (ExamResult e : results) {
+            if (e.getSubject().equalsIgnoreCase(name)) {
+                count++;
+            }
+        }
+        System.out.println("Количество экзаменов \"" + name + "\": " + count);
+    }
 }
