@@ -15,11 +15,11 @@ public class Main {
 
             int c = (new Scanner(System.in)).nextInt();
             switch (c) {
-                case 1: ExamResult.fillResults(); break;
-                case 2: ExamResult.printResults(); break;
-                case 3: ExamResult.taskA(); break;
-                case 4: ExamResult.taskB(); break;
-                case 5: ExamResult.taskC(); break;
+                case 1: ExamService.fillResults(); break;
+                case 2: ExamService.printResults(); break;
+                case 3: ExamService.taskA(); break;
+                case 4: ExamService.taskB(); break;
+                case 5: ExamService.taskC(); break;
                 default: break cycle;
             }
         }
