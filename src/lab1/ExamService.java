@@ -130,4 +130,20 @@ public class ExamService {
             System.out.printf("Предмет: %-15s | Средний балл: %.2f%n", subjects[i], averages[i]);
         }
     }
+
+    public static void findByName(String name) {
+        boolean isFind = true;
+        for (int i = 0; i < results.length; i++) {
+            if (results[i].getSubject().equals(name)) {
+                System.out.println(results[i].getSubject());
+                isFind = true;
+            }
+            else{
+                isFind = false;
+            }
+        }
+        if (!isFind){
+            System.out.println("Предмет не найден");
+        }
+    }
 }
